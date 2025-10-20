@@ -36,9 +36,9 @@
 
         <!-- Conector para base de datos MySQL -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.33</version>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>9.4.0</version>
         </dependency>
 
         <!-- Lombok: herramienta para reducir código repetitivo como getters/setters -->
