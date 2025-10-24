@@ -1,10 +1,15 @@
 package com.example.biblioteca;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RestController
+@RequestMapping("/")
 public class BienvenidaController {
 
-    static void main(){
-        System.out.println("bienvenido Monte Naranco");
-
-        String realese = ("Mensaje nuevo para la realese");
+    @GetMapping
+    public String Bienvenida() {
+        return "Bienvenido al IES Monte";
     }
 }
