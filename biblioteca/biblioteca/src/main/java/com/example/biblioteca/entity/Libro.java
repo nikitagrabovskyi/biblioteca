@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 
         @Column(nullable = false) //Al ponerlo a posteriori, hay que modificar la base de datos;
         private String titulo;
-
+        @Column
         private String autor;
     }
 
