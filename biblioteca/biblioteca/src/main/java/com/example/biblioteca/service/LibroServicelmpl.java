@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 import java.util.Optional;
 
-public class LibroServicelmpl implements LIbroService.LibroService {
+public class LibroServicelmpl implements LIbroService{
 
     @Autowired
     private LibroRepository libroRepository;
