@@ -7,7 +7,8 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface LibroRepository extends JpaRepository<Libro,Long> {
-    @Query(name="SELECT * FROM libro l")
+    @Query("SELECT l FROM libro l")
+
     List<Libro> listalibros();
 
 
