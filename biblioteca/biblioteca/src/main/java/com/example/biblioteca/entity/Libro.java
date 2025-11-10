@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
     public class Libro {
 
         @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY) // Se generará automáticamente el id;
+        @GeneratedValue(strategy = GenerationType.AUTO) // Se generará automáticamente el id;
         private Long id;
 
         @Column(nullable = false) //Al ponerlo a posteriori, hay que modificar la base de datos;
