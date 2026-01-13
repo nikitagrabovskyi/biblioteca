@@ -9,14 +9,12 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-
 @RestController
 @RequestMapping(path = "/api")
-@Service
 public class LibroController {
 
     @Autowired
-    private LibroServicelmpl libroServiceImpl; //Se inyecta dependencia
+    private LibroServicelmpl libroServiceImpl;
 
     @GetMapping
     public List<Libro> obtenerTodos(){
@@ -26,17 +24,17 @@ public class LibroController {
     @GetMapping("/{id}")
     public Optional<Libro> getLibro(@PathVariable Long id){
         return this.libroServiceImpl.getLibro(id);
-
     }
 
     @PostMapping
-    void guardarOActualizarLibro(@RequestBody Libro libro){
+     public void guardarOActualizarLibro(@RequestBody Libro libro){
         this.libroServiceImpl.guardarOActualizarLibro(libro);
     }
 
     @DeleteMapping("/{libroId}")
-    void eliminarLibro(@PathVariable("libroId") Long libroId){
+     public void eliminarLibro(@PathVariable("libroId") Long libroId){
         this.libroServiceImpl.eliminarLibro(libroId);
     }
-
 }
+
+
